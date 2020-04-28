@@ -15,7 +15,7 @@ const mongoUrl = process.env.MONGGO_DB_URL;
 // Connecting Mongoose
 mongoose.set("useCreateIndex", true);
   mongoose
-    .connect(mongoUrl, {useNewUrlParser: true, useUnifiedTopology: true})
+    .connect("mongodb+srv://aderahmanp:wesper007@cluster0-hshhj.mongodb.net/digimon?retryWrites=true&w=majority", {useNewUrlParser: true, useUnifiedTopology: true})
     .then(() => {
         console.log(`Mongoose connected at ${mongoUrl}`);
       })
