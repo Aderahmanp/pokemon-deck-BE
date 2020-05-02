@@ -1,6 +1,7 @@
 const express = require("express");
 const digimonRoutes = require("./routes/digimonRoutes")
 const mongoose = require("mongoose")
+const cors = require("cors");
 
 try {
     dotEnv = require("dotenv").config();
@@ -28,6 +29,7 @@ mongoose.set("useCreateIndex", true);
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
+app.use(cors());
 
 // Initialization of plug'in Middleware, Routes
 app.use("/", digimonRoutes)
