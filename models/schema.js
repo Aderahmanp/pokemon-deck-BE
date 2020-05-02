@@ -5,7 +5,7 @@ const Schema = mongoose.Schema
 const DigimonSchema = new Schema({
     name: { type: String, required: true, unique: true},
     img: { type: String,  required: true, unique: true},
-    level: { type: String,  required: true, unique: true}
+    level: { type: String,  required: true}
 })
 
 DigimonSchema.plugin(uniqueValidator);
