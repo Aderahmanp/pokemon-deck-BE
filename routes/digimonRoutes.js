@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const digimonController = require("../contrallers/digimonController");
+const digimonController = require("../controllers/digimonController");
 
 
 router.post("/digimon", digimonController.createDigimon);
